@@ -1,3 +1,7 @@
+# Fizone #
+
+Captive portal based on WifiDog
+
 # WifiDog #
 
 [![Build Status](https://travis-ci.org/wifidog/wifidog-gateway.svg?branch=master)](https://travis-ci.org/wifidog/wifidog-gateway)
@@ -28,14 +32,6 @@ Client and server speak the [WifiDog Protocol Version 1][protov1],
 with Version 2 being a draft which has not been implemented so far.
 A detailed description of the login process involving user,
 client and server is available as a [flow diagram][flowdia].
-
-## Install ##
-
-See the [faq][FAQ].
-
-## Contributing ##
-
-See [devdoc][README.developers.txt].
 
 
 ## License ##
