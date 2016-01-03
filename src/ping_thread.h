@@ -1,4 +1,3 @@
-/* vim: set sw=4 ts=4 sts=4 et : */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -19,7 +18,7 @@
  *                                                                  *
 \********************************************************************/
 
-/* $Id$ */
+/* $Id: ping_thread.h 1104 2006-10-09 00:58:46Z acv $ */
 /** @file ping_thread.h
     @brief WiFiDog heartbeat thread
     @author Copyright (C) 2004 Alexandre Carmel-Veilleux <acv@miniguru.ca>

@@ -18,7 +18,7 @@
  *                                                                  *
 \********************************************************************/
 
-/* $Id$ */
+/* $Id: http.h 1346 2008-04-21 23:04:40Z acv $ */
 /** @file http.h
     @brief HTTP IO functions
     @author Copyright (C) 2004 Philippe April <papril777@yahoo.com>
@@ -30,23 +30,21 @@
 #include "httpd.h"
 
 /**@brief Callback for libhttpd, main entry point for captive portal */
-void http_callback_404(httpd *, request *, int);
+void http_callback_404(httpd *webserver, request *r);
 /**@brief Callback for libhttpd */
-void http_callback_wifidog(httpd *, request *);
+void http_callback_wifidog(httpd *webserver, request *r);
 /**@brief Callback for libhttpd */
-void http_callback_about(httpd *, request *);
+void http_callback_about(httpd *webserver, request *r);
 /**@brief Callback for libhttpd */
-void http_callback_status(httpd *, request *);
+void http_callback_status(httpd *webserver, request *r);
 /**@brief Callback for libhttpd, main entry point post login for auth confirmation */
-void http_callback_auth(httpd *, request *);
-/**@brief Callback for libhttpd, disconnect user from network */
-void http_callback_disconnect(httpd *, request *);
+void http_callback_auth(httpd *webserver, request *r);
 
 /** @brief Sends a HTML page to web browser */
-void send_http_page(request *, const char *, const char* );
+void send_http_page(request *r, const char *title, const char* message);
 
 /** @brief Sends a redirect to the web browser */
-void http_send_redirect(request *, const char *, const char *);
+void http_send_redirect(request *r, char *url, char *text);
 /** @brief Convenience function to redirect the web browser to the authe server */
-void http_send_redirect_to_auth(request *, const char *, const char *);
+void http_send_redirect_to_auth(request *r, char *urlFragment, char *text);
 #endif /* _HTTP_H_ */

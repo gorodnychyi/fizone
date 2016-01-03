@@ -1,4 +1,3 @@
-/* vim: set sw=4 ts=4 sts=4 et : */
 /********************************************************************\
  * This program is free software; you can redistribute it and/or    *
  * modify it under the terms of the GNU General Public License as   *
@@ -19,7 +18,7 @@
  *                                                                  *
 \********************************************************************/
 
-/* $Id$ */
+/* $Id: centralserver.h 1373 2008-09-30 09:27:40Z wichert $ */
 /** @file centralserver.h
     @brief Functions to talk to the central server (auth/send stats/get rules/etc...)
     @author Copyright (C) 2004 Philippe April <papril777@yahoo.com>
@@ -47,16 +46,18 @@
 #define GATEWAY_MESSAGE_ACCOUNT_LOGGED_OUT     "logged-out"
 
 /** @brief Initiates a transaction with the auth server */
-t_authcode auth_server_request(t_authresponse * authresponse,
-                               const char *request_type,
-                               const char *ip,
-                               const char *mac,
-                               const char *token, unsigned long long int incoming, unsigned long long int outgoing, unsigned long long int incoming_delta, unsigned long long int outgoing_delta);
+t_authcode auth_server_request(t_authresponse *authresponse,
+			const char *request_type,
+			const char *ip,
+			const char *mac,
+			const char *token,
+			unsigned long long int incoming,
+			unsigned long long int outgoing);
 
 /** @brief Tries really hard to connect to an auth server.  Returns a connected file descriptor or -1 on error */
-int connect_auth_server(void);
+int connect_auth_server();
 
 /** @brief Helper function called by connect_auth_server() to do the actual work including recursion - DO NOT CALL DIRECTLY */
 int _connect_auth_server(int level);
 
-#endif                          /* _CENTRALSERVER_H_ */
+#endif /* _CENTRALSERVER_H_ */
