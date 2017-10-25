@@ -28,8 +28,8 @@ int main()
     	char line[size];
     	while(fgets(line, size, fp))
     	{
-        	sscanf(line, "%s 0x%x 0x%x %s %s %s\n",ip_address,&hw_type,&flags,mac_address,mask,device);
-        	if(strstr(device, "wlp2s0") != 0) {
+          sscanf(line, "%s 0x%x 0x%x %s %s %s\n",ip_address,&hw_type,&flags,mac_address,mask,device);
+		if(strstr(device, "wlp2s0") != 0) {
         		printf("Wlan_if: %s\nMAC: %s\n", device, mac_address);
         		break;
         	}
